@@ -50,8 +50,12 @@ The `zepto` table contains the following columns:
 
 ## 📌 Example Queries
 
+## 📌 Example Queries
+
+```sql
 -- 1️⃣ Count total rows in the dataset
 SELECT COUNT(*) FROM zepto;
+
 
 -- 2️⃣ Check for NULL values
 SELECT * FROM zepto
