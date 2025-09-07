@@ -47,49 +47,19 @@ The `zepto` table contains the following columns:
    - 🏋️ Total inventory weight per category  
 
 ---
+🚀 Key Insights
 
-## 📌 Example Queries
+Certain categories contribute the majority of revenue despite fewer SKUs.
 
-## 📌 Example Queries
+Some high-MRP products remain out of stock, impacting potential sales.
 
-```sql
--- 1️⃣ Count total rows in the dataset
-SELECT COUNT(*) FROM zepto;
+A few categories show consistently higher discounts, useful for marketing focus.
 
+Inventory weight analysis helps optimize supply chain & logistics.
 
--- 2️⃣ Check for NULL values
-SELECT * FROM zepto
-WHERE name IS NULL
-   OR category IS NULL
-   OR mrp IS NULL
-   OR discountPercent IS NULL
-   OR availableQuantity IS NULL
-   OR discountedSellingPrice IS NULL
-   OR weightInGms IS NULL
-   OR outOfStock IS NULL
-   OR quantity IS NULL;
+🛠 Tech Stack
 
--- 3️⃣ Find distinct product categories
-SELECT DISTINCT category
-FROM zepto
-ORDER BY category;
+SQL (MySQL)
 
--- 4️⃣ Products in stock vs out of stock
-SELECT outOfStock, COUNT(sku_id) AS product_count
-FROM zepto
-GROUP BY outOfStock;
-
--- 5️⃣ Products appearing multiple times
-SELECT name, COUNT(sku_id) AS number_of_skus
-FROM zepto
-GROUP BY name
-HAVING COUNT(sku_id) > 1
-ORDER BY number_of_skus DESC;
-
--- 1️⃣1️⃣ Total inventory weight per category
-SELECT category,
-       SUM(weightInGms * availableQuantity) AS total_weight
-FROM zepto
-GROUP BY category
-ORDER BY total_weight DESC;
+Google Colab 
 
