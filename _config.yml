@@ -5,8 +5,8 @@ title: [ZEPTO DATA ANALYSIS]
 description: [DATA ANALYSIS OF ZEPTO USING SQL]
 
 title: Zepto Data Analysis
-logo: /ZEPTO-DATA-ANALYSIS
-/zepto_logo.png
+logo: /i=Images/zepto.png
+
 description: "Data analysis of Zepto using SQL"
 show_downloads: false
 theme: jekyll-theme-minimal
