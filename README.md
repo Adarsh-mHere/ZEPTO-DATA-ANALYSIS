@@ -1,6 +1,4 @@
-# Let's create a README.md file with the project description for GitHub
-
-readme_content = """# 📊 Zepto Data Analysis (SQL Project)
+# Zepto Data Analysis (SQL Project)
 
 This project demonstrates **data cleaning, exploration, and analysis** using SQL on Zepto product data.  
 It highlights querying techniques for **data validation, business insights, and revenue estimation**.
