@@ -3,3 +3,9 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: [ZEPTO DATA ANALYSIS]
 description: [DATA ANALYSIS OF ZEPTO USING SQL]
+
+title: Zepto Data Analysis
+logo: /images/zepto.png
+description: "Data analysis of Zepto using SQL"
+show_downloads: false
+theme: jekyll-theme-minimal
