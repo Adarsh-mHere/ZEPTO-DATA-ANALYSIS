@@ -4,11 +4,6 @@ This project demonstrates **data cleaning, exploration, and analysis** using SQL
 It highlights querying techniques for **data validation, business insights, and revenue estimation**.
 
 ---
-<p align="center">
-  <img src="images/zepto.png" alt="Zepto Logo" width="300"/>
-</p>
-
-
 
 ## 🗂 Dataset Structure
 The `zepto` table contains the following columns:
