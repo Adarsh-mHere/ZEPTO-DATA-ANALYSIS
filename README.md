@@ -1,72 +1,58 @@
-# ZEPTO-DATA-ANALYSIS
-ZEPTO DATA ANALYSIS USING SQL
-📊 Zepto Data Analysis (SQL Project)
+# Let's create a README.md file with the project description for GitHub
 
-This project demonstrates data cleaning, exploration, and analysis using SQL on Zepto product data.
-It highlights querying techniques for data validation, business insights, and revenue estimation.
+readme_content = """# 📊 Zepto Data Analysis (SQL Project)
 
-🗂 Dataset Structure
+This project demonstrates **data cleaning, exploration, and analysis** using SQL on Zepto product data.  
+It highlights querying techniques for **data validation, business insights, and revenue estimation**.
 
-The zepto table contains the following columns:
+---
 
-sku_id – Unique product identifier
+## 🗂 Dataset Structure
+The `zepto` table contains the following columns:
+- `sku_id` – Unique product identifier  
+- `category` – Product category (e.g., beverages, snacks)  
+- `name` – Product name  
+- `mrp` – Maximum Retail Price (in ₹)  
+- `discountPercent` – Discount offered (%)  
+- `availableQuantity` – Quantity available  
+- `discountedSellingPrice` – Price after discount (₹)  
+- `weightInGms` – Product weight (grams)  
+- `outOfStock` – Availability status (TRUE/FALSE)  
+- `quantity` – Order quantity  
 
-category – Product category (e.g., beverages, snacks)
+---
 
-name – Product name
+## ⚙️ Project Workflow
+1. **Data Validation**
+   - Count total rows  
+   - Check for `NULL` values  
+   - Identify duplicate product names  
+   - Validate prices (`mrp` or selling price = 0)  
 
-mrp – Maximum Retail Price (in ₹)
+2. **Data Cleaning**
+   - Removed invalid rows (`mrp = 0`)  
+   - Converted paise → rupees  
+   - Standardized price columns  
 
-discountPercent – Discount offered (%)
+3. **Exploratory Analysis**
+   - Distinct product categories  
+   - Stock availability (in-stock vs. out-of-stock)  
+   - High-discount products  
+   - High-MRP products that are out of stock  
 
-availableQuantity – Quantity available
+4. **Business Insights**
+   - 💰 **Revenue estimation** per category  
+   - 📉 Categories with highest average discount %  
+   - ⚖️ Price per gram analysis for bulk vs. low-weight items  
+   - 🏋️ Total inventory weight per category  
 
-discountedSellingPrice – Price after discount (₹)
+---
 
-weightInGms – Product weight (grams)
+## 📌 Example Queries
 
-outOfStock – Availability status (TRUE/FALSE)
-
-quantity – Order quantity
-
-⚙️ Project Workflow
-
-Data Validation
-
-Count total rows
-
-Check for NULL values
-
-Identify duplicate product names
-
-Validate prices (mrp or selling price = 0)
-
-Data Cleaning
-
-Removed invalid rows (mrp = 0)
-
-Converted paise → rupees
-
-Standardized price columns
-
-Exploratory Analysis
-
-Distinct product categories
-
-Stock availability (in-stock vs. out-of-stock)
-
-High-discount products
-
-High-MRP products that are out of stock
-
-Business Insights
-
-📌 Example Queries
-
-Top 10 highest discounted products
-
+**Top 10 highest discounted products**
+```sql
 SELECT DISTINCT name, mrp, discountPercent
 FROM zepto
 ORDER BY discountPercent DESC
 LIMIT 10;
-
